@@ -1,6 +1,7 @@
 package no.ntnu.iir.wargames;
 
-/** Super class for all units that battle.
+/**
+ * Super class for all units that battle.
  *
  * @author: Adrian R. Dahl
  * @Version 15.02.2022
@@ -11,7 +12,8 @@ public abstract class Unit {
   private int attack;
   private int armor;
 
-  /** Create a unit.
+  /**
+   * Create a unit.
    *
    * @param name   Name of the unit
    * @param health Health points
@@ -25,7 +27,8 @@ public abstract class Unit {
     this.armor = armor;
   }
 
-  /** Returns the name of the unit.
+  /**
+   * Returns the name of the unit.
    *
    * @return The unit's name
    */
@@ -33,7 +36,8 @@ public abstract class Unit {
     return this.name;
   }
 
-  /** Returns the health of the unit.
+  /**
+   * Returns the health of the unit.
    *
    * @return the unit's health
    */
@@ -41,7 +45,8 @@ public abstract class Unit {
     return this.health;
   }
 
-  /** Returns the attack of the unit.
+  /**
+   * Returns the attack of the unit.
    *
    * @return the unit's attack
    */
@@ -49,7 +54,8 @@ public abstract class Unit {
     return this.attack;
   }
 
-  /** Returns the armor of the unit.
+  /**
+   * Returns the armor of the unit.
    *
    * @return The unit's armor
    */
@@ -57,7 +63,8 @@ public abstract class Unit {
     return this.armor;
   }
 
-  /** Sets the health of the unit.
+  /**
+   * Sets the health of the unit.
    *
    * @param health What the unit's health should be set to
    */
@@ -65,7 +72,8 @@ public abstract class Unit {
     this.health = health;
   }
 
-  /** Creates a string containing the information of all the unit's fields.
+  /**
+   * Creates a string containing the information of all the unit's fields.
    *
    * @return The string containing the information
    */
@@ -79,19 +87,22 @@ public abstract class Unit {
         + '}';
   }
 
-  /** Returns the attack bonus of the unit.
+  /**
+   * Returns the attack bonus of the unit.
    *
    * @return Bonus attack
    */
   public abstract int getAttackBonus();
 
-  /** Returns the resistance bonus of the unit.
+  /**
+   * Returns the resistance bonus of the unit.
    *
    * @return Bonus resistance
    */
   public abstract int getResistBonus();
 
-  /** This unit attacks another unit from the opponent then sets that unit's health
+  /**
+   * This unit attacks another unit from the opponent then sets that unit's health
    * to whatever is left after the attack has been calculated.
    *
    * @param opponent The opponent's unit to fight
