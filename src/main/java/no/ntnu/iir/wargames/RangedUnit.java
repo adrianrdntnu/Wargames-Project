@@ -2,6 +2,9 @@ package no.ntnu.iir.wargames;
 
 /**
  * A unit good at ranged attacks.
+ *
+ * @author Adrian R. Dahl
+ * @version 21.02.2022
  */
 public class RangedUnit extends Unit {
   private int timesAttacked;
@@ -43,6 +46,9 @@ public class RangedUnit extends Unit {
   public int getResistBonus() {
     int bonusResist;
     bonusResist = (2 - this.timesAttacked) * 2;
+    if (bonusResist <= 0) {
+      bonusResist = 0;
+    }
     this.timesAttacked++;
     return 2 + bonusResist;
   }

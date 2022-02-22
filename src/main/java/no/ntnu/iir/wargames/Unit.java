@@ -3,8 +3,8 @@ package no.ntnu.iir.wargames;
 /**
  * Super class for all units that battle.
  *
- * @author: Adrian R. Dahl
- * @Version 15.02.2022
+ * @author Adrian R. Dahl
+ * @version 15.02.2022
  */
 public abstract class Unit {
   private String name;

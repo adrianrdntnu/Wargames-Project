@@ -12,4 +12,13 @@ public class RangedUnitTest {
     assertEquals("John", rangedUnit.getName());
     assertEquals(40, rangedUnit.getHealth());
   }
+
+  @Test
+  public void testRangedUnitBonusResistance(){
+    RangedUnit rangedUnit = new RangedUnit("John", 40);
+    assertEquals(6, rangedUnit.getResistBonus());
+    assertEquals(4, rangedUnit.getResistBonus());
+    assertEquals(2, rangedUnit.getResistBonus());
+    assertEquals(2, rangedUnit.getResistBonus());
+  }
 }

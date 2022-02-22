@@ -2,6 +2,9 @@ package no.ntnu.iir.wargames;
 
 /**
  * A well-balanced unit good at close-ranged combat.
+ *
+ * @author Adrian R. Dahl
+ * @version 21.02.2022
  */
 public class InfantryUnit extends Unit {
   /**

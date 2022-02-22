@@ -2,6 +2,9 @@ package no.ntnu.iir.wargames;
 
 /**
  * A stronger version of CavalryUnit.
+ *
+ * @author Adrian R. Dahl
+ * @version 21.02.2022
  */
 public class CommanderUnit extends CavalryUnit {
   /**

@@ -2,6 +2,9 @@ package no.ntnu.iir.wargames;
 
 /**
  * A close-ranged unit with bonus attack on it's first attack.
+ *
+ * @author Adrian R. Dahl
+ * @version 21.02.2022
  */
 public class CavalryUnit extends Unit {
   private boolean hasAttacked;
