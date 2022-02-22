@@ -21,6 +21,22 @@ public abstract class Unit {
    * @param armor  Resistance to attacks
    */
   protected Unit(String name, int health, int attack, int armor) {
+    if (name == null || name.equals("")) {
+      throw new IllegalArgumentException("Name cannot be null nor be empty");
+    }
+
+    if (health <= 0) {
+      throw new IllegalArgumentException("Health cannot be lower or equal 0");
+    }
+
+    if (attack < 0) {
+      throw new IllegalArgumentException("Negative attack values not allowed");
+    }
+
+    if (armor < 0) {
+      throw new IllegalArgumentException("Negative armor values not allowed");
+    }
+
     this.name = name;
     this.health = health;
     this.attack = attack;
@@ -107,7 +123,12 @@ public abstract class Unit {
    *
    * @param opponent The opponent's unit to fight
    */
-  public void attack(Unit opponent) {
+  public void attack(Unit opponent) throws IllegalArgumentException {
+    if (opponent == null) {
+      throw new
+          IllegalArgumentException("Opponent cannot be null");
+    }
+
     int newHealth = opponent.getHealth() - (this.getAttack() + this.getAttackBonus())
         + (opponent.getArmor() + opponent.getResistBonus());
     opponent.setHealth(newHealth);
