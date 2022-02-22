@@ -130,8 +130,8 @@ public class Army {
    * @return A random unit in this army
    */
   public Unit getRandom() {
-    int maxUnits = units.size();
+    int maxUnits = this.units.size();
     int randomNumber = rng.nextInt(maxUnits);
-    return units.get(randomNumber);
+    return this.units.get(randomNumber);
   }
 }

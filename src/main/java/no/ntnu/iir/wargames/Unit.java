@@ -89,9 +89,9 @@ public abstract class Unit {
   }
 
   /**
-   * Creates a string containing the information of all the unit's fields.
+   * Returns a string representation of the unit.
    *
-   * @return The string containing the information
+   * @return a string representation of the unit
    */
   @Override
   public String toString() {
