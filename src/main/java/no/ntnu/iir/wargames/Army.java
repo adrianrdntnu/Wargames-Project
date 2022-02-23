@@ -13,8 +13,8 @@ import java.util.Random;
  */
 public class Army {
   private String name;
-  private List<Unit> units;
-  private Random rng = new Random();
+  private final List<Unit> units;
+  private final Random rng = new Random();
 
   /**
    * Create an army.

@@ -131,6 +131,9 @@ public abstract class Unit {
 
     int newHealth = opponent.getHealth() - (this.getAttack() + this.getAttackBonus())
         + (opponent.getArmor() + opponent.getResistBonus());
-    opponent.setHealth(newHealth);
+    //Sets the health of opponent to the new health as long as it has lost health
+    if (newHealth < opponent.getHealth()) {
+      opponent.setHealth(newHealth);
+    }
   }
 }

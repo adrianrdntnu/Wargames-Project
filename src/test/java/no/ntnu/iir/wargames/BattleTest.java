@@ -18,4 +18,6 @@ public class BattleTest {
     assertEquals(armyOne, battle.simulate());
   }
 
+  //TODO: pretty sure this test can be better, and should have a negative test too (?)
+
 }

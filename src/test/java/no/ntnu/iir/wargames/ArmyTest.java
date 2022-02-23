@@ -1,15 +1,25 @@
 package no.ntnu.iir.wargames;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
 public class ArmyTest {
 
   @Test
-  public void testCreationOfArmyWithGoodParameters(){
+  public void testCreationOfArmyWithValidParameters(){
     Army army = new Army("John");
     assertEquals("John", army.getName());
+  }
+
+  @Test
+  public void testCreationOfUnitWithInvalidParameters(){
+    try {
+      Army army = new Army(null);
+    } catch (IllegalArgumentException iae){
+      assertTrue(true);
+    }
   }
 
   @Test

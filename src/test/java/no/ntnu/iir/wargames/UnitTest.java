@@ -5,13 +5,15 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-public class CavalryUnitTest {
+public class UnitTest {
 
   @Test
   public void testCreationOfUnitWithValidParameters(){
-    CavalryUnit cavalryUnit = new CavalryUnit("John", 40);
-    assertEquals("John", cavalryUnit.getName());
-    assertEquals(40, cavalryUnit.getHealth());
+    DummyUnit dummyUnit = new DummyUnit("John", 40, 4, 4);
+    assertEquals("John", dummyUnit.getName());
+    assertEquals(40, dummyUnit.getHealth());
+    assertEquals(4, dummyUnit.getAttack());
+    assertEquals(4, dummyUnit.getArmor());
   }
 
   @Test
@@ -21,12 +23,6 @@ public class CavalryUnitTest {
     } catch (IllegalArgumentException iae){
       assertTrue(true);
     }
-  }
-
-  @Test
-  public void testCavalryUnitBonusResistance(){
-    CavalryUnit cavalryUnit = new CavalryUnit("John", 40);
-    assertEquals(1, cavalryUnit.getResistBonus());
   }
 
   @Test

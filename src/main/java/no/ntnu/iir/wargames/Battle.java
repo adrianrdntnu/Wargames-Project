@@ -7,9 +7,8 @@ package no.ntnu.iir.wargames;
  * @version 22.02.2022
  */
 public class Battle {
-  Army armyOne;
-  Army armyTwo;
-
+  private Army armyOne;
+  private Army armyTwo;
 
   /**
    * Creates a battle.
