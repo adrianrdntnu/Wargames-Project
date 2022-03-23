@@ -134,4 +134,48 @@ public class Army {
     int randomNumber = rng.nextInt(maxUnits);
     return this.units.get(randomNumber);
   }
+
+  /**
+   * Returns a list of all infantry units in the army.
+   *
+   * @return the list of infantry units
+   */
+  public List<Unit> getInfantryUnits() {
+    return units.stream()
+        .filter(InfantryUnit.class::isInstance)
+        .toList();
+  }
+
+  /**
+   * Returns a list of all cavalry units in the army.
+   *
+   * @return the list of cavalry units
+   */
+  public List<Unit> getCavalryUnits() {
+    return units.stream()
+        .filter(unit -> unit instanceof CavalryUnit && !(unit instanceof CommanderUnit))
+        .toList();
+  }
+
+  /**
+   * Returns a list of all ranged units in the army.
+   *
+   * @return the list of ranged units
+   */
+  public List<Unit> getRangedUnits() {
+    return units.stream()
+        .filter(RangedUnit.class::isInstance)
+        .toList();
+  }
+
+  /**
+   * Returns a list of all commander units in the army.
+   *
+   * @return the list of commander units
+   */
+  public List<Unit> getCommanderUnits() {
+    return units.stream()
+        .filter(CommanderUnit.class::isInstance)
+        .toList();
+  }
 }
