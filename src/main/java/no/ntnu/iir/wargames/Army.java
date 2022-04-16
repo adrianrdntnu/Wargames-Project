@@ -178,4 +178,8 @@ public class Army {
         .filter(CommanderUnit.class::isInstance)
         .toList();
   }
+
+  public List<Unit> getUnits() {
+    return this.units;
+  }
 }

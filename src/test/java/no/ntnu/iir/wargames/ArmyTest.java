@@ -15,7 +15,7 @@ public class ArmyTest {
   }
 
   @Test
-  public void testCreationOfUnitWithInvalidParameters(){
+  public void testCreationOfArmyWithInvalidParameters(){
     try {
       Army army = new Army(null);
     } catch (IllegalArgumentException iae){
