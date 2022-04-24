@@ -179,6 +179,11 @@ public class Army {
         .toList();
   }
 
+  /**
+   * Returns a list of all units in this army.
+   *
+   * @return The list of units
+   */
   public List<Unit> getUnits() {
     return this.units;
   }

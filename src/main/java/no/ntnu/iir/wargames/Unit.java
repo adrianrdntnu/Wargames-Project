@@ -20,7 +20,7 @@ public abstract class Unit {
    * @param attack Attack value
    * @param armor  Resistance to attacks
    */
-  protected Unit(String name, int health, int attack, int armor) {
+  protected Unit(String name, int health, int attack, int armor) throws IllegalArgumentException {
     if (name == null || name.equals("")) {
       throw new IllegalArgumentException("Name cannot be null nor be empty");
     }
